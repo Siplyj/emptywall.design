@@ -1,0 +1,108 @@
+.homepage_consultation_wrapper {
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1440px;
+	margin: 0px auto 100px auto;
+}
+
+.homepage_consultation_info {
+    width: 45%;
+    min-width: 350px;
+}
+
+.homepage_consultation_title {
+    color: #292F36;
+    margin-bottom: 40px;
+    font-size: 3vw;
+    line-height: 3.5vw;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.homepage_consultation_description {
+    display: block;
+    text-align: justify;
+    color: var(--light-gray-text);
+    margin-bottom: 40px;
+}
+
+.homepage_consultation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.homepage_consultation_communication {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 30px;
+    min-width: 240px;
+}
+
+.homepage_consultation_communication img {
+    width: 75px;
+    margin-bottom: 30px;
+}
+
+.homepage_consultation_phone {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    border: 1px solid rgba(17, 17, 17, 0.8);
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 90%;
+    color: #4D5053;
+}
+
+.homepage_consultation_phone_text {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.homepage_consultation_email_button {
+    display: block;
+    width: 90%;
+    height: 50px;
+    border: 1px solid rgba(17, 17, 17, 0.8);
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: rgba(17, 17, 17, 0.8);
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 2px;
+    outline: none; 
+}
+
+.homepage_consultation_phone:hover,
+.homepage_consultation_email_button:hover {
+    color: #FFFFFF;
+    box-sizing: border-box;
+    background-color: rgba(17, 17, 17, 0.8);
+}
+
+.homepage_consultation_image {
+    max-height: 650px;
+    min-width: 350px;
+    border-radius: 0px 300px 0px 100px;
+}
+
+@media (min-width: 1600px) {
+  .homepage_consultation_title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+@media (max-width: 950px) {
+    .homepage_consultation_info {
+        width: 90%;
+    }
+}

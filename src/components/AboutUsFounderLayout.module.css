@@ -1,0 +1,40 @@
+.about_founder_wrapper {
+	max-width: 1440px;
+	margin: 0px auto 100px auto;
+}
+
+.about_founder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	width: 95%;
+}
+
+.about_founder_photo {
+	width: 30%;
+	height: fit-content;
+	min-width: 350px;
+	padding-bottom: 50px;
+}
+
+.about_founder_text {
+	width: calc(60% + 10% / 6 * 2);
+	color: var(--light-gray-text);
+}
+
+.about_founder_text p:last-child {
+	color: #000000;
+}
+
+.about_founder_text p {
+	text-align: justify;
+	text-indent: 20px;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 1150px) {
+    .about_founder_text {
+        width: 95%;
+    }
+}

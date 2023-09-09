@@ -1,0 +1,23 @@
+.price_table {
+	background-color: #F2F2F2;
+	border-collapse: collapse;
+	width: 95%;
+	max-width: 700px;
+	margin-bottom: 20px;
+}
+
+.price_table_th,
+.price_table_td,
+.price_table_td_cost {
+	padding: 5px 20px;
+	border: 1px solid #000000;
+	line-height: 20px;
+}
+
+.price_table_th {
+	background-color: #C4C4C4;
+}
+
+.price_table_td_cost {
+	text-align: center;
+}

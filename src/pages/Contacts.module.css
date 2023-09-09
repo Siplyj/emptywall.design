@@ -1,0 +1,23 @@
+.contacts_page_wrapper {
+	position: fixed;
+	background-image: url("../files/images/HomePage/background_image.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	left: 0px;
+	right: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	color: #FFFFFF;
+}
+
+.contacts_wrapper {
+	position: relative;
+	display: table;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	background-color: rgba(255,255,255,0.4);
+}

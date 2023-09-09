@@ -1,0 +1,85 @@
+.error_page_wrapper {
+	position: fixed;
+    background-image: url('../files/images/ErrorPage/error_cover.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    left: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    color: #FFFFFF;
+}
+
+.error_wrapper {
+	position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.error_message {
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.error_title {
+	letter-spacing: 1.5vw;
+    font: 400 3.5vw "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.error_description {
+    font: 400 1vw/1.8 "Roboto", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.error_button {
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    font: 0.8vw "Roboto", sans-serif;
+    letter-spacing: 2px;
+    padding: 10px 40px;
+}
+
+@media (min-width: 1600px) {
+    .error_title {
+        font-size: 56px;
+        letter-spacing: 24px;
+    }
+
+    .error_description {
+        font-size: 16px;
+    }
+
+    .error_button {
+        font-size: 12.8px;
+    }
+}
+
+@media (max-width: 850px) {
+    .error_title {
+        font-size: 30px;
+        letter-spacing: 13px;
+    }
+
+    .error_description {
+        font-size: 8.5px;
+    }
+
+    .error_button {
+        font-size: 6.8px;
+    }
+}

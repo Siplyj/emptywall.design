@@ -1,0 +1,82 @@
+.homepage_reviews_wrapper {
+    margin-bottom: 70px;
+    position: relative;
+
+    background-image: url("../files/images/HomePage/background_image.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.homepage_reviews_list {
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    transform: translate3d(0px, 0px, 0px);
+    transition: transform 0.5s ease;
+    width: 300%;
+    padding: 140px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.homepage_review_wrapper {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    transition: margin-right 0.5s ease;
+}
+
+.homepage_review {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.homepage_review_wrapper span {
+    display: block;
+}
+
+.homepage_review_text {
+    font: 18px "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.homepage_review_client_name {
+    font: 14px "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.homepage_review_client_location {
+    font: 11px "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.prev_button, .next_button {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.prev_button {
+    left: 0;
+    cursor: url(../files/images/ProjectPage/prev-arrow.png), w-resize;
+}
+
+.next_button {
+    right: 0;
+    cursor: url(../files/images/ProjectPage/next-arrow.png), e-resize;
+}

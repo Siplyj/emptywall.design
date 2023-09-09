@@ -1,0 +1,50 @@
+.homepage_services_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 50px;
+	width: 90%;
+	max-width: 1440px;
+}
+
+.homepage_service {
+	display: block;
+	margin-bottom: 20px;
+	width: 30%;
+	min-width: 320px;
+	text-align: justify;
+}
+
+.homepage_services_icon {
+	width: 75px;
+	margin: 0 auto 15px;
+	display: block;
+}
+
+.homepage_services_title {
+	font: 400 16px "Roboto", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #111111;
+	margin-bottom: 15px;
+}
+
+.homepage_services_description {
+	display: block;
+	line-height: 20px;
+	text-align: justify;
+	color: var(--light-gray-text);
+}
+
+@media (max-width: 1150px) {
+	.homepage_service {
+		width: 45%;
+	}
+}
+
+@media (max-width: 800px) {
+	.homepage_service {
+		width: 90%;
+	}
+}

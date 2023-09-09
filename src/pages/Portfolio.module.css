@@ -1,0 +1,17 @@
+.portfolio_list_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 95%;
+    margin: 0px auto 100px auto;
+    flex-grow: 1;
+}
+
+.portfolio_projects_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 0px 0px -10px;
+    list-style: none;
+    max-width: 1440px;
+}

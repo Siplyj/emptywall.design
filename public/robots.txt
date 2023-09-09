@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /.env
+Host: https://emptywall.design
+Sitemap: https://emptywall.design/sitemap.txt

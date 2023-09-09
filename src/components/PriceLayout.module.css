@@ -1,0 +1,53 @@
+.price_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-direction: column;
+    width: 95%;
+    margin: 0px auto 50px auto;
+}
+
+.price_notes {
+    width: 95%;
+    max-width: 700px;
+    padding: 0px 20px;
+    text-align: justify;
+}
+
+.price_note {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.price_additions_title {
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+.price_additions_list {
+    margin: 0px 20px 50px 0px;
+    padding-left: 40px;
+}
+
+.price_pdf {
+    text-decoration: none;
+}
+
+.price_pdf_button {
+    display: block;
+    margin: 0px auto;
+    padding: 10px 30px;
+    font-size: 20px;
+    border: 1px solid rgba(10, 10, 10, 0.9);
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgba(10, 10, 10, 0.9);
+}
+
+.price_pdf_button:hover {
+    color: #FFFFFF;
+    box-sizing: border-box;
+    background-color: rgba(10, 10, 10, 0.9);
+}
