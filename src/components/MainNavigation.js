@@ -86,7 +86,7 @@ function MainNavigation() {
 		>
 
 			<nav className={classes.header_navigation_wrapper}>
-				<div className={classes.header_mobile}>
+				<div className={classes.transformable_header}>
 					<Link to="/" className={classes.header_company_name} onClick={scrollToTop} >
 						EmptyWall
 					</Link>

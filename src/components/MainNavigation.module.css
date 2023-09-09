@@ -33,6 +33,10 @@
   font-size: 11px;
 }
 
+.transformable_header {
+  display: contents;
+}
+
 .header_company_name {
   margin: 0px;
   letter-spacing: 4px;
@@ -121,7 +125,7 @@
         width: 100%;
     }
 
-    .header_mobile {
+    .transformable_header {
       display: flex;
       flex-direction: row;
       align-items: center;
