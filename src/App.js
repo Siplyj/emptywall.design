@@ -1,6 +1,4 @@
-import { defer } from 'react-router-dom';
-
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { defer, RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';

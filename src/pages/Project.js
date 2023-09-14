@@ -1,22 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom'; //
 
 import Slider from '../components/Slider';
 import ContactLayout from '../components/ContactLayout';
 
 function ProjectPage() {
 	const { t, i18n } = useTranslation();
+	const navigate = useNavigate();
 	const [projectData, setProjectData] = useState(null);
 	
 	useEffect(() => {
 
 		const fetchProject = async () => {
-			try {
-				const data = await loadProject();
+			const data = await loadProject();
+			if (data) {
 				setProjectData(data);
-			} catch (error) {
-				console.error(error);
+			} else {
+				navigate('/error');
 			}
 		};
 
