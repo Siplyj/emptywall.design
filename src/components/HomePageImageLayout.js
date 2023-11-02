@@ -1,14 +1,16 @@
 import classes from './HomePageImageLayout.module.css';
 
+import { useTranslation } from 'react-i18next';
+
 function HomePageImageLayout() {
+	const { t } = useTranslation();
+
 	return (
 		<div className={classes.homepage_main_image_wrapper}>
-			<div>
-				<div className={classes.homepage_main_image_data}>
-					<h1 className="block_title">Let's Create Your Dream Interior</h1>
-					<p className="block_description">The world needs innovators and problem solvers who turn challenges into greater opportunities.</p>
-				</div>
+			<div className={classes.homepage_main_image_data}>
+				<h1 className="block_title">{t('homepage.main_image_title')}</h1>
 			</div>
+			<div className={classes.homepage_main_image_overlay} />
 		</div>
 	)
 }

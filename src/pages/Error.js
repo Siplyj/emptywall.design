@@ -27,18 +27,18 @@ function ErrorPage() {
 	}
 
 	return (
-			<section className={classes.error_page_wrapper}>
-			<Helmet>
-				<title>{t('error.page_title')}</title>
-			</Helmet>
-				<div className={classes.error_wrapper} >
-					<div className={classes.error_message} >
-						<div className={classes.error_title} >{title}</div>
-						<div className={classes.error_description}>{message}</div>
-						<Link className={classes.error_button} to="/">Back to home page</Link>
-					</div>
+		<section className={classes.error_page_wrapper}>
+		<Helmet>
+			<title>{t('error.page_title')}</title>
+		</Helmet>
+			<div className={classes.error_wrapper} >
+				<div className={classes.error_message} >
+					<div className={classes.error_title} >{title}</div>
+					<div className={classes.error_description}>{message}</div>
+					<Link className={classes.error_button} to="/">Back to home page</Link>
 				</div>
-			</section>
+			</div>
+		</section>
 	);
 }
 
