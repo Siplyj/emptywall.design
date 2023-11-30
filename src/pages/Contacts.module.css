@@ -1,5 +1,8 @@
 .contacts_page_wrapper {
-	position: fixed;
+	position: relative;
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: column;
 	background-image: url("../files/images/HomePage/background_image.jpg");
 	background-attachment: fixed;
 	background-size: cover;
@@ -7,17 +10,49 @@
 	background-position: center center;
 	left: 0px;
 	right: 0px;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
-	color: #FFFFFF;
 }
 
-.contacts_wrapper {
+.contacts_overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 1;
+}
+
+.contacts_title,
+.contacts_description {
 	position: relative;
-	display: table;
-	height: 100%;
+	z-index: 1;
+}
+
+.contacts_form_data {
 	width: 100%;
-	margin: 0 auto;
-	background-color: rgba(255,255,255,0.4);
+}
+
+.contacts_form_and_map {
+	position: relative;
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1440px;
+    z-index: 1;
+}
+
+.contacts_page_form {
+	width: 45%;
+}
+
+.contacts_map {
+	width: 45%;
+}
+
+.map {
+	width: 100%;
+	border: 0;
 }

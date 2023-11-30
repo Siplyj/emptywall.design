@@ -29,11 +29,11 @@ function AboutUsFAQLayout() {
 	return (
 		<div className={classes.faq_block_wrapper} >
 			<h1 className={`block_title ${classes.faq_block_title}`} >
-				Питання та відповіді
+				{t('about_us.question_title')}
 			</h1>
 			
 			<span className={`block_description ${classes.faq_block_description}`}>
-				Ми підготували для вас відповіді на запитання, які нам найчастіше ставлять.
+				{t('about_us.question_description')}
 			</span>
 			<div className={classes.faq_questions_wrapper}>
 				<div className={classes.faq_questions}>

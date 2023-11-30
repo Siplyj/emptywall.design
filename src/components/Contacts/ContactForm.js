@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Form } from 'react-router-dom';
+import { Form, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AWS from 'aws-sdk';
 import AWSConfig from '../../awsConfig';
-import classes from './ContactForm.module.css';
+import classes_pop_up from './ContactForm_pop_up.module.css';
+import classes_contacts_page from './ContactForm_contacts_page.module.css';
 
 const ContactForm = () => {
 	const { t } = useTranslation();
@@ -13,6 +14,8 @@ const ContactForm = () => {
 	const [phone, setPhone] = useState('');
 	const [message, setMessage] = useState('');
 	const [sendingStatus, setSendingStatus] = useState('waiting');
+	const location = useLocation();
+	const classes = location.pathname === '/contacts' ? classes_contacts_page : classes_pop_up;
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
