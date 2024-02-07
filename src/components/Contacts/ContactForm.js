@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Form, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import AWS from 'aws-sdk';
-import AWSConfig from '../../awsConfig';
 import classes_pop_up from './ContactForm_pop_up.module.css';
 import classes_contacts_page from './ContactForm_contacts_page.module.css';
 
@@ -18,53 +16,34 @@ const ContactForm = () => {
 	const classes = location.pathname === '/contacts' ? classes_contacts_page : classes_pop_up;
 
 	const handleSubmit = async (event) => {
-		event.preventDefault();
+	event.preventDefault();
 
-		AWS.config.update(AWSConfig);
+	try {
+		const response = await fetch('https://7bfn8hhcng.execute-api.eu-central-1.amazonaws.com/default/emailSendFunction', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				firstName,
+				lastName,
+				email,
+				phone,
+				message
+			}),
+		});
 
-		try {
-			const messageBody =
-			`
-				Имя: ${firstName}
-				Фамилия: ${lastName}
-				Телефон: ${phone}
-				Email: ${email}
-				
-				${message}
-			`;
-
-			const params = {
-				Destination: {
-					ToAddresses: ['info@emptywall.design'],
-				},
-				Message: {
-					Body: {
-						Text: { Data: messageBody },
-					},
-					Subject: {
-						Data: `Сообщение с сайта от ${firstName} ${lastName} - ${window.location.href}`
-					},
-				},
-				Source: 'info@emptywall.design',
-			};
-
-			const sendEmailPromise = new AWS.SES({apiVersion: '2010-12-01' }).sendEmail(params).promise();
-			setSendingStatus('sending');
-			await sendEmailPromise;
-
-			setFirstName('');
-			setLastName('');
-			setEmail('');
-			setPhone('');
-			setMessage('');
+		if (response.ok) {
 			setSendingStatus('sendingOk');
-
-			setTimeout(() => setSendingStatus('waiting'), 3000);
-		} catch (error) {
+		} else {
 			setSendingStatus('sendingError');
-			setTimeout(() => setSendingStatus('waiting'), 3000);
 		}
-	};
+	} catch (error) {
+		console.error('Error sending email:', error);
+		setSendingStatus('sendingError');
+	}
+};
+
 
 	return (
 		<div className={classes.form_wrapper}>

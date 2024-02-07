@@ -15,7 +15,7 @@ This site is dedicated to the interior design studio EmptyWall in Kyiv. It will 
 - i18next to make the site multi-lingual
 - Helmet to fill tags in the head tag
 - Amazon S3 to store the site
-- Amazon SES for sending E-mails from the site to company E-mails
+- Amazon SES and Amazon Lambda for sending E-mails from the site to company E-mails
 
 
 **Link to the website**
