@@ -20,8 +20,6 @@ const isBrowserLanguageSupported = (browserLanguage) => {
   }
 }
 
-const defaultLanguage = selectedLanguage || browserLanguage || 'uk';
-
 i18n.use(initReactI18next).init({
   resources,
   lng: selectedLanguage || isBrowserLanguageSupported(browserLanguage) || 'uk',

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom'; //
 
+import { useNavigate } from 'react-router-dom';
 import Slider from '../components/Slider';
 import ContactLayout from '../components/ContactLayout';
 
