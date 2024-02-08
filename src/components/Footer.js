@@ -63,7 +63,7 @@ function Footer() {
 					</Link>
 				</div>
 
-				<p className={classes.footer_text}>{t('footer.text_1')}</p>
+				<p className={classes.footer_text}>{`© 2017-${new Date().getFullYear()}`}, {t('footer.text_1')}</p>
 				<p className={classes.footer_text}>{t('footer.text_2')}</p>
 			</div>
 		</footer>
