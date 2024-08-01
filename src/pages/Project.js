@@ -23,7 +23,7 @@ function ProjectPage() {
 		};
 
 		fetchProject();
-	}, []);
+	}, [navigate]);
 
 	const loadProject = async () => {
 		const response = await fetch('https://emptywall.design/projects.json');

@@ -7,8 +7,13 @@ import classes from './PriceLayout.module.css';
 import { useTranslation } from 'react-i18next';
 
 function PriceLayout() {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const { mainNavigationHeight } = useMainNavigation();
+
+	let priceFileUrl = `https://emptywall.design/files/price/price_${i18n.language}.pdf`;
+	if (i18n.language === 'uk') {
+		priceFileUrl = 'https://emptywall.design/files/price/price_ua.pdf';
+	};
 	
 	return (
 		<div
@@ -30,7 +35,7 @@ function PriceLayout() {
 					<li>{t('price.addition_2')}</li>
 				</ul>
 
-				<Link className={classes.price_pdf} href="https://emptywall.design/files/price/price.pdf">
+				<Link className={classes.price_pdf} to={priceFileUrl} target="_blank" download>
 					<input className={classes.price_pdf_button} type="button" value={t('price.pdf_button')} />
 				</Link>
 			</div>
