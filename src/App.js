@@ -6,7 +6,7 @@ import RootLayout from './pages/Root';
 import PricePage from './pages/Price';
 import PortfolioPage from './pages/Portfolio';
 import ProjectPage from './pages/Project';
-import ContactsPage from './pages/Contacts';
+// import ContactsPage from './pages/Contacts';
 import ErrorPage from './pages/Error';
 
 import { loadProjects } from './components/HomePageProjectsListLayout';
@@ -44,10 +44,10 @@ const router = createBrowserRouter([
           }
         ],
       },
-      {
-        path: 'contacts',
-        element: <ContactsPage />,
-      }
+      // {
+      //   path: 'contacts',
+      //   element: <ContactsPage />,
+      // }
     ],
   }
 ]);

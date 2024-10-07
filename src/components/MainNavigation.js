@@ -151,7 +151,7 @@ function MainNavigation() {
 							{t('header.portfolio')}
 						</NavLink>
 					</li>
-					<li>
+					{/*<li>
 						<NavLink
 							to="/stages"
 							className={({ isActive }) =>
@@ -172,7 +172,7 @@ function MainNavigation() {
 						>
 							{t('header.contacts')}
 						</NavLink>
-					</li>
+					</li>*/}
 
 					{ !isSmallScreen &&
 						<li className={classes.languages_container}
