@@ -42,6 +42,26 @@ function Footer() {
 					>
 						RU
 					</span>
+					<span className={classes.spacer}>|</span>
+					<span
+						onClick={() => handleChangeLanguage('en')}
+						className={`
+							${i18n.language === 'en' ? classes.active_language : ''}
+							${classes.language}
+						`}
+					>
+						EN
+					</span>
+					<span className={classes.spacer}>|</span>
+					<span
+						onClick={() => handleChangeLanguage('pl')}
+						className={`
+							${i18n.language === 'pl' ? classes.active_language : ''}
+							${classes.language}
+						`}
+					>
+						PL
+					</span>
 				</div>
 
 				<div className={classes.footer_contacts} >

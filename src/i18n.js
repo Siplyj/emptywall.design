@@ -3,10 +3,14 @@ import { initReactI18next } from 'react-i18next';
 
 import uaTranslation from './locales/uk/translation.json';
 import ruTranslation from './locales/ru/translation.json';
+import enTranslation from './locales/en/translation.json';
+import plTranslation from './locales/pl/translation.json';
 
 const resources = {
   uk: { translation: uaTranslation },
-  ru: { translation: ruTranslation }
+  ru: { translation: ruTranslation },
+  en: { translation: enTranslation },
+  pl: { translation: plTranslation },
 };
 
 const selectedLanguage = localStorage.getItem('selectedLanguage');

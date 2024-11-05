@@ -208,6 +208,24 @@ function MainNavigation() {
 								>
 									RU
 								</li>
+								<li
+									onClick={() => handleChangeLanguage('en')}
+									className={`
+										${i18n.language === 'en' ? classes.active_link : ''}
+										${totalScrolled < 50 ? classes.language_transparent : classes.language}
+									`}
+								>
+									EN
+								</li>
+								<li
+									onClick={() => handleChangeLanguage('pl')}
+									className={`
+										${i18n.language === 'pl' ? classes.active_link : ''}
+										${totalScrolled < 50 ? classes.language_transparent : classes.language}
+									`}
+								>
+									PL
+								</li>
 							</ul>
 						</li>
 					}
@@ -232,6 +250,26 @@ function MainNavigation() {
 								`}
 							>
 								RU
+							</span>
+							<span className={classes.spacer}>|</span>
+							<span
+								onClick={() => handleChangeLanguage('en')}
+								className={`
+									${i18n.language === 'en' ? classes.active_link : ''}
+									${classes.navigation_link}
+								`}
+							>
+								EN
+							</span>
+							<span className={classes.spacer}>|</span>
+							<span
+								onClick={() => handleChangeLanguage('pl')}
+								className={`
+									${i18n.language === 'pl' ? classes.active_link : ''}
+									${classes.navigation_link}
+								`}
+							>
+								PL
 							</span>
 						</div>
 					}
